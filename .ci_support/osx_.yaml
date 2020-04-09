@@ -26,4 +26,4 @@ pin_run_as_build:
   nlopt:
     max_pin: x.x.x
 scotch:
-- 6.0.8
+- 6.0.9
