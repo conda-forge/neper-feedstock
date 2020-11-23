@@ -5,11 +5,13 @@ Home: http://neper.info/
 
 Package license: GPL-3
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/neper-feedstock/blob/master/LICENSE.txt)
 
 Summary: Neper is a software package for polycrystal generation and meshing.
 
+Development: https://github.com/rquey/neper
 
+Documentation: https://rquey.github.io/neper/docs/neper.pdf
 
 Current build status
 ====================
