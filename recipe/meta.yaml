@@ -1,5 +1,5 @@
 {% set name = "neper" %}
-{% set version = "4.1.2" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/rquey/neper/archive/v{{ version }}.tar.gz
-  sha256: 418be28dd14b75d009be63f8510c1fae24f1f017daabd6fa8215b9e2b22f5e3f
+  sha256: c80ddcc6b9f201536d9336cd707bebaa4461ac32a68b72a35c0b690e038e5457
 
 build:
   number: 0
