@@ -1,5 +1,5 @@
 {% set name = "neper" %}
-{% set version = "4.1.2" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/rquey/neper/archive/v{{ version }}.tar.gz
-  sha256: 418be28dd14b75d009be63f8510c1fae24f1f017daabd6fa8215b9e2b22f5e3f
+  sha256: 04dc6a08f7acba217e72ef61f6b71dd8f77438c58dcffcca0f7728dc782dcf0e
 
 build:
   number: 0
@@ -17,8 +17,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
     - cmake
+    - make
+  host:
     - libblas
     - llvm-openmp  # [osx]
     - gsl
@@ -27,7 +28,6 @@ requirements:
     - openmp
   run:
     - gsl
-    - scotch
     - nlopt
     - openmp
     - gmsh
@@ -38,7 +38,7 @@ test:
 
 about:
   home: http://neper.info/
-  license: GPL-3
+  license: GPL-3.0-only
   license_family: GPL
   license_file:
     - COPYING
