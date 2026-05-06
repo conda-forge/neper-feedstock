@@ -36,7 +36,7 @@ requirements:
 test:
   commands:
     - neper --help
-    - neper --version
+    - neper -T -n 10 -reg 1
 
 about:
   home: http://neper.info/
