@@ -17,10 +17,13 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
+    - {{ stdlib('c') }}
     - cmake
+    - make
+  host:
     - libblas
     - llvm-openmp  # [osx]
+    - libgomp  # [linux]
     - gsl
     - scotch
     - nlopt
@@ -29,12 +32,12 @@ requirements:
     - gsl
     - scotch
     - nlopt
-    - openmp
     - gmsh
 
 test:
   commands:
     - neper --help
+    - neper --version
 
 about:
   home: http://neper.info/
@@ -44,8 +47,8 @@ about:
     - COPYING
     - CREDITS
   summary: Neper is a software package for polycrystal generation and meshing.
-  doc_url: https://rquey.github.io/neper/docs/neper.pdf
-  dev_url: https://github.com/rquey/neper
+  doc_url: https://neper.info
+  dev_url: https://github.com/neperfepx/neper
 
 extra:
   recipe-maintainers:
