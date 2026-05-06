@@ -27,7 +27,6 @@ requirements:
     - gsl
     - scotch <7
     - nlopt
-    - openmp
   run:
     - gsl
     - scotch <7
