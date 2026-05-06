@@ -25,12 +25,12 @@ requirements:
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - gsl
-    - scotch
+    - scotch <7
     - nlopt
     - openmp
   run:
     - gsl
-    - scotch
+    - scotch <7
     - nlopt
     - gmsh
 
