@@ -1,13 +1,13 @@
 {% set name = "neper" %}
-{% set version = "4.1.2" %}
+{% set version = "4.10.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/rquey/neper/archive/v{{ version }}.tar.gz
-  sha256: 418be28dd14b75d009be63f8510c1fae24f1f017daabd6fa8215b9e2b22f5e3f
+  url: https://github.com/neperfepx/neper/archive/v{{ version }}.tar.gz
+  sha256: 73aeb29658a73fa5fd1deec74daacc1d43fcf0f771da4157a00fb3736dbdc37e
 
 build:
   number: 0
@@ -17,36 +17,39 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
+    - {{ stdlib('c') }}
     - cmake
+    - make
+  host:
     - libblas
     - llvm-openmp  # [osx]
+    - libgomp  # [linux]
     - gsl
-    - scotch
+    - scotch <7
     - nlopt
-    - openmp
   run:
     - gsl
-    - scotch
+    - scotch <7
     - nlopt
-    - openmp
     - gmsh
 
 test:
   commands:
     - neper --help
+    - neper -T -n 10 -reg 1
 
 about:
   home: http://neper.info/
-  license: GPL-3
+  license: GPL-3.0-only
   license_family: GPL
   license_file:
     - COPYING
     - CREDITS
   summary: Neper is a software package for polycrystal generation and meshing.
-  doc_url: https://rquey.github.io/neper/docs/neper.pdf
-  dev_url: https://github.com/rquey/neper
+  doc_url: https://neper.info
+  dev_url: https://github.com/neperfepx/neper
 
 extra:
   recipe-maintainers:
     - npavlovikj
+    - lang-m
