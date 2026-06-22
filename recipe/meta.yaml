@@ -35,8 +35,9 @@ requirements:
 
 test:
   commands:
-    - neper --help
-    - neper -T -n 10 -reg 1
+    - test -f $PREFIX/bin/neper
+    - neper --help  # [build_platform == target_platform]
+    - neper -T -n 10 -reg 1  # [build_platform == target_platform]
 
 about:
   home: http://neper.info/
