@@ -1,5 +1,5 @@
 {% set name = "neper" %}
-{% set version = "4.10.1" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/neperfepx/neper/archive/v{{ version }}.tar.gz
-  sha256: 73aeb29658a73fa5fd1deec74daacc1d43fcf0f771da4157a00fb3736dbdc37e
+  sha256: b6bc63db2f1090b0a78117d43bc3be823960b46f04b4b8978a81b7dd1c06dccc
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
