@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/neperfepx/neper/archive/v{{ version }}.tar.gz
   sha256: 17fa03b5ae647a613d7c7fbd324c769061050b8835f24ea03a3b48aec9644032
+  patches:
+    # Gmsh workers on macOS (upstream 98fd00365, in 7.0.1)
+    - 0001-Fix-Gmsh-workers-on-macOS.patch
 
 build:
   number: 0
