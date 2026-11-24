@@ -11,7 +11,7 @@ Summary: Neper is a software package for polycrystal generation and meshing.
 
 Development: https://github.com/neperfepx/neper
 
-Documentation: https://neper.info
+Documentation: https://neper.info/doc/
 
 Current build status
 ====================
